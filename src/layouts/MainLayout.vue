@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header elevated bg-transparent>
       <q-toolbar>
         <q-btn
           flat
@@ -8,16 +8,14 @@
           round
           icon="menu"
           aria-label="Menu"
-          @click="leftDrawerOpen =! leftDrawerOpen"
-        />
+          @click="leftDrawerOpen =! leftDrawerOpen"/>
         </q-toolbar>
        <div class="q-px-lg q-pt-xl q-mb-md">
-        <div class="text-h3">Todo</div>
+        <div class="text-h3 myFont">Todo</div>
         <div class="text-subtitle1 q-px-lg ">{{ todaysDate }}</div>
         </div>
-      <q-img src="statics/bg1.jpg" class="header-image absolute-top"></q-img>
+      <q-img src="statics/bg1.jpg" class="header-image absolute-top "></q-img>
     </q-header>
-
 <q-drawer
         v-model="leftDrawerOpen"
         show-if-above
@@ -137,7 +135,14 @@ export default {
   .header-image{
     height:100%;
     z-index: -1;
-    opacity:0.2;
-    filter: grayscale(100%);
+    // opacity:0.2;
+    // filter: grayscale(100%);
+    // background: none !important;
+  }
+  .myFont {
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Monoton', cursive;
+    // font-family: 'Rubik Mono One', sans-serif;
+
   }
 </style>
