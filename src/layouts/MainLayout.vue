@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated bg-transparent>
+  <q-layout view="lHh Lpr lFf" >
+    <q-header elevated >
       <q-toolbar>
         <q-btn
           flat
@@ -22,7 +22,7 @@
         :width="250"
         :breakpoint="600"
       >
-        <q-scroll-area style="height: calc(100% - 192px); margin-top: 192px; border-right: 1px solid #ddd">
+        <q-scroll-area style="height: calc(100% - 192px); margin-top: 192px; border-right: 4px solid #ddd" >
           <q-list padding>
             <q-item to="/" exact clickable v-ripple>
               <q-item-section avatar>
@@ -39,6 +39,15 @@
               </q-item-section>
               <q-item-section>
                 Help
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/info" exact clickable v-ripple>
+              <q-item-section avatar>
+                <q-icon name="info" />
+              </q-item-section>
+              <q-item-section>
+                About us
               </q-item-section>
             </q-item>
           </q-list>
